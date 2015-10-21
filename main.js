@@ -61,9 +61,7 @@ $('#answer4').text(finalArray);
 
 ////////////////// Answer 5 /////////////////////////
 var eightOrMore = _.filter(items, function(el){
-  if(el.materials.length >= 8){
-    return el;
-  }
+  return el.materials.length >= 8;
 })
 
 var display = _.map(eightOrMore, function(el){
@@ -74,9 +72,7 @@ $('#answer5').text(display);
 
 ////////////////////// Answer 6 /////////////////////
 var madeby = _.filter(items, function(el){
-  if(el.who_made === "i_did"){
-    return el;
-  }
+  return el.who_made === "i_did";
 });
 
 var itemAmount = madeby.length;
